@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeaponCore.Interfaces
 {
-    public interface IMleeWeapon : IRepairable, IUpgradable
+    public interface IMleeWeapon : IRepairable, IUpgradebleDamage
     {
         public int MleeDamage { get; set; }
         public void Hit();
