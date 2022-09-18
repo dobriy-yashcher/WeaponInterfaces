@@ -1,4 +1,6 @@
-﻿namespace WeaponCore.Interfaces
+﻿// Turushkin Sergey, 320P, "WeaponInterfaces"
+
+namespace WeaponCore.Interfaces
 {
     public interface IUpgradable : IUpgradebleDamage, IUpgradebleAmmo { }
     

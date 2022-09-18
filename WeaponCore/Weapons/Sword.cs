@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Turushkin Sergey, 320P, "WeaponInterfaces"
+
 using WeaponCore.Interfaces;
 
 namespace WeaponCore.Weapons

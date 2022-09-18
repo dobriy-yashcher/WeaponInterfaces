@@ -1,4 +1,6 @@
-﻿using WeaponCore.Units;
+﻿// Turushkin Sergey, 320P, "WeaponInterfaces"
+
+using WeaponCore.Units;
 using WeaponCore.Weapons;
 
 var deagle = new Deagle(30, 30, 1);
