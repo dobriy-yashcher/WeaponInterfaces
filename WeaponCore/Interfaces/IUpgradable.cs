@@ -2,7 +2,7 @@
 {
     public interface IUpgradable
     {
-        public void UpgradeDamage();
-        public void UpgradeAmmo();
+        public void UpgradeDamage(int countDamageUpgrade);
+        public void UpgradeAmmo(int countAmmoSizeUpgrade);
     }
 }

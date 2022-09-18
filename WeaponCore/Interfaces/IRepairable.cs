@@ -3,6 +3,6 @@
     public interface IRepairable
     {
         public int Condition { get; set; }
-        public void Repair();
+        public void Repair(int countConditionRepaired);
     }
 }

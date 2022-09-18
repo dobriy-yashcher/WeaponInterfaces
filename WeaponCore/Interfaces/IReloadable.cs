@@ -4,6 +4,6 @@
     {
         public int CurrentAmmoSize { get; set; }
         public int MaxAmmoSize { get; set; }
-        public void Reload();
+        public void Reload(int countCartridges);
     }
 }
