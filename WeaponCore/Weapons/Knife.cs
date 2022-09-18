@@ -59,7 +59,7 @@ namespace WeaponCore.Weapons
 
             else
             {
-                --Condition;
+                Condition = 0;
                 Console.WriteLine($"Knife throw with {ThrowDamage}.");
             }
         }
