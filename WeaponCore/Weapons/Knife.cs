@@ -25,7 +25,7 @@ namespace WeaponCore.Weapons
         {
             if (Condition <= 0)
             {
-                Console.WriteLine("Knife is broken");
+                Console.WriteLine("Knife is broken.");
             }
 
             else
@@ -54,7 +54,7 @@ namespace WeaponCore.Weapons
         {
             if (Condition <= 0)
             {
-                Console.WriteLine("Knife is broken");
+                Console.WriteLine("Knife is broken.");
             }
 
             else

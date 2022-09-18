@@ -31,7 +31,7 @@ namespace WeaponCore.Units
             weapon.AutoShoot();
         }
 
-        public void HitByKnife(IMleeWeapon weapon)
+        public void Hit(IMleeWeapon weapon)
         {
             weapon.Hit();
         }
@@ -41,7 +41,7 @@ namespace WeaponCore.Units
             item.Reload(countCartridges);
         }
 
-        public void ThrowKnife(IThrowable weapon)
+        public void Throw(IThrowable weapon)
         {
             weapon.Throw();
         }

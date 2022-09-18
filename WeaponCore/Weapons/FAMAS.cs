@@ -12,15 +12,13 @@ namespace WeaponCore.Weapons
         public int Damage { get; set; }
         public int CurrentAmmoSize { get; set; }
         public int MaxAmmoSize { get; set; }
-        public int Cartridges { get; set; }
         public int Condition { get; set; }
 
-        public FAMAS(int startDamage, int ammoSize, int cartridges, int condition)
+        public FAMAS(int startDamage, int ammoSize, int condition)
         {
             Damage = startDamage;
             CurrentAmmoSize = ammoSize;
             MaxAmmoSize = ammoSize;
-            Cartridges = cartridges;
             Condition = condition;
         }
 
@@ -29,16 +27,14 @@ namespace WeaponCore.Weapons
             if (CurrentAmmoSize + countCartridges <= MaxAmmoSize)
             {
                 CurrentAmmoSize += countCartridges;
-                Cartridges -= countCartridges;
             }
 
             else
             {
                 CurrentAmmoSize = MaxAmmoSize;
-                Cartridges -= MaxAmmoSize - CurrentAmmoSize;
             }
 
-            Console.WriteLine($"The FAMAS is reloaded. Current ammo size: {CurrentAmmoSize}, ammo left: {Cartridges}.");
+            Console.WriteLine($"The FAMAS is reloaded. Current ammo size: {CurrentAmmoSize}.");
         }
 
         public void Repair(int countConditionRepaired)
@@ -52,13 +48,19 @@ namespace WeaponCore.Weapons
         {
             if (Condition <= 0)
             {
-                Console.WriteLine("FAMAS is broken");
+                Console.WriteLine("FAMAS is broken.");
             }
 
             else
             {
-                --Condition;
-                Console.WriteLine($"FAMAS shooting with {Damage}.");
+                if (CurrentAmmoSize <= 0) Console.WriteLine($"FAMAS ammo is empty.");
+
+                else
+                {
+                    --Condition;
+                    --CurrentAmmoSize;
+                    Console.WriteLine($"FAMAS shooting with {Damage}.");
+                }
             }
         }
 
@@ -66,13 +68,19 @@ namespace WeaponCore.Weapons
         {
             if (Condition <= 0)
             {
-                Console.WriteLine("FAMAS is broken");
+                Console.WriteLine("FAMAS is broken.");
             }
 
             else
             {
-                --Condition;
-                Console.WriteLine($"FAMAS shooting full clip with {Damage * CurrentAmmoSize}.");
+                if (CurrentAmmoSize <= 0) Console.WriteLine($"FAMAS ammo is empty.");
+
+                else
+                {
+                    --Condition;
+                    Console.WriteLine($"FAMAS shooting full clip with {Damage * CurrentAmmoSize}.");
+                    CurrentAmmoSize = 0;
+                }
             }
         }
 

@@ -22,7 +22,7 @@ namespace WeaponCore.Weapons
         {
             if (Condition <= 0)
             {
-                Console.WriteLine("Sword is broken");
+                Console.WriteLine("Sword is broken.");
             }
 
             else
